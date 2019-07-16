@@ -19,23 +19,24 @@ public class Registradora {
 			if(opcion == 1){
 				mercaderias.agregarProducto();
 			}
-			else if(opcion == 1){
+			else if(opcion == 2){
 				mercaderias.eliminarProducto();
 			}
 			else if(opcion == 3){
 				mercaderias.mostrarProductos();
-				continue;
 			}
 			
 			else if(opcion == 0){
 				seguir = false;
+				System.out.print(" Bye bye");
+				break;
 			}
 			else{
 				System.out.println("\n Opcion inválida");
 				System.out.println(" Ingrese nuevamente");
-				System.out.print(" Opcion = ");
-				opcion = teclado.nextInt();
 			}
+			System.out.print(" Opcion = ");
+			opcion = teclado.nextInt();
 		}
 	}
 	
