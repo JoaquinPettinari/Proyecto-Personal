@@ -5,11 +5,20 @@ public class Parte1{
 	public static void main (String [] args){
 //		------- Ejercicio 1 -------
 //		darVueltaUnaLista();
+		
 //		------- Ejercicio 2 -------
 //		mayoresAUnNumero();
+		
 //		------- Ejercicio 3 -------
 //		temperaturas();
+		
 //		------- Ejercicio 4 -------
+//		nombresEspecificos();
+		
+//		------- Ejercicio 5 -------
+		
+		
+
 		
 	}
 //	------- Ejercicio 1 -------
@@ -60,12 +69,40 @@ public class Parte1{
 		System.out.println("Temperatura mas baja = " + menor);
 		System.out.println("Temperatura promedio = " + media / dias);
 		System.out.println("Temperatura mas alta = " + mayor);
-		
-		
 	}
 	
+//	------- Ejercicio 4 -------
+	public static void nombresEspecificos(){
+		Scanner leer = new Scanner(System.in);
+		System.out.print("Ingrese la cantidad de alumnos que va a ingresar: ");
+		int cantidadAlumnos = leer.nextInt();
+		String [] nombres = new String[cantidadAlumnos];
+		String [] apellidos = new String[cantidadAlumnos];
+		char letra;
+		String letra2;
+		for(int i = 0; i < cantidadAlumnos; i++){
+			System.out.println("Ingrese nombre: ");
+			nombres[i] = leer.next();
+			System.out.println("Ingrese apellido del alumno " + nombres[i]);
+			apellidos[i] = leer.next();
+		}
+		System.out.print("Ingrese la letra de quien buscar: ");
+		letra2 = leer.next();
+		letra = letra2.charAt(0);
 		
+		for(int j = 0; j < cantidadAlumnos; j++){
+			if(nombres[j].charAt(0) == letra){
+				System.out.println(nombres[j] + " " + apellidos[j]);
+			}
+		}
+		System.out.print("Fin");
+	}
 		
+//	------- Ejercicio 5 -------
+	public static void cantidadCaracteres(){
+		
+	}
+
 		
 		
 	
