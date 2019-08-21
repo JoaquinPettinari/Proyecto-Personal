@@ -1,5 +1,6 @@
 package Obj2;
 import java.util.Scanner;
+import java.util.Random; 
 
 public class Parte1{
 	public static void main (String [] args){
@@ -16,8 +17,14 @@ public class Parte1{
 //		nombresEspecificos();
 		
 //		------- Ejercicio 5 -------
+//		contarLetras();
+		
+//		------- Ejercicio 6 -------
+//		matriz();
 		
 		
+//		------- Ejercicio 7 -------
+		matriz10x10();
 
 		
 	}
@@ -99,10 +106,70 @@ public class Parte1{
 	}
 		
 //	------- Ejercicio 5 -------
-	public static void cantidadCaracteres(){
-		
+	public static void contarLetras(){
+		Scanner leer = new Scanner(System.in);
+		String cadena = "";
+		char [] caracteres;
+		char caracter;
+		int contador = 0;
+		System.out.println("Escribi una frase: ");
+		cadena = leer.nextLine();
+		caracteres = cadena.toCharArray();
+		for(int i = 0; i < caracteres.length; i++){
+			caracter = caracteres[i];
+			for(int j = 0; j < caracteres.length; j++){
+				if(caracteres[j] == caracter){
+					contador++;
+				}
+			}
+			System.out.println(caracteres[i] + " " + contador);
+			contador = 0;
+		}
 	}
 
+//	------- Ejercicio 6 -------
+	public static void matriz(){
+		Scanner leer = new Scanner(System.in);
+		int [][] matriz = new int[3][3];
+		System.out.println("Ingrese los datos de la matriz ");
+		for(int i = 0; i < matriz.length; i++){
+			for(int j = 0; j < matriz.length; j++){
+				System.out.print("Ingrese dato posicion ["+ i+ "]" + "[" + j + "] : " );
+				matriz[i][j] = leer.nextInt();
+			}
+			System.out.println("");
+		}
+		mostrarMatriz(matriz);
+		
+		
+	}
+	public static void mostrarMatriz(int [][] matriz){
+		
+		for (int i = 0; i < matriz.length; i++){
+			for(int j = 0; j < matriz.length; j++){
+				System.out.print(matriz[i][j] + "\t");
+			}
+			System.out.println();
+			System.out.println();
+		}
+	}
+	
+//	------- Ejercicio 7 -------
+	public static void matriz10x10() {
+		Scanner leer = new Scanner(System.in);
+		int [][] matriz = new int [10][10];
+		Random r = new Random();
+		System.out.println("Matriz: ");
+		for(int i = 0; i < matriz.length; i++){
+			for(int j = 0; j < matriz.length; j++){
+				int aleatorio = r.nextInt(100);
+				matriz[i][j] = aleatorio;
+			}
+		}
+		mostrarMatriz(matriz);
+	}
+
+	
 		
 		
 	
