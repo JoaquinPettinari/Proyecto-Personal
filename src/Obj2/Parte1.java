@@ -8,7 +8,7 @@ public class Parte1{
 //		darVueltaUnaLista();
 		
 //		------- Ejercicio 2 -------
-//		mayoresAUnNumero();
+		mayoresAUnNumero();
 		
 //		------- Ejercicio 3 -------
 //		temperaturas();
@@ -24,7 +24,7 @@ public class Parte1{
 		
 		
 //		------- Ejercicio 7 -------
-		matriz10x10();
+//		matriz10x10();
 
 		
 	}
